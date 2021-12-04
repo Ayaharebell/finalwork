@@ -12,7 +12,64 @@ namespace final
 {
     public partial class Form_main : WeifenLuo.WinFormsUI.Docking.DockContent
     {
-        const int width = 30;
+
+        const int width = 36;
+        Point[] points = {
+            new Point((int)(6 * width), (int)(0.5 * width)),
+            new Point((int)(7 * width), (int)(0.5 * width)),
+            new Point((int)(8 * width), (int)(0.5 * width)),//红家门口
+            new Point((int)(9 * width), (int)(0.5 * width)),
+            new Point((int)(10 * width), (int)(0.5 * width)),
+            new Point((int)(11 * width), (int)(1 * width)),
+            new Point((int)(11.5 * width), (int)(2 * width)),
+            new Point((int)(11.5 * width), (int)(3 * width)),
+            new Point((int)(11 * width), (int)(4 * width)),
+            new Point((int)(12 * width), (int)(5 * width)),
+            new Point((int)(13 * width), (int)(4.5 * width)),
+            new Point((int)(14 * width), (int)(4.5 * width)),
+            new Point((int)(15 * width), (int)(5 * width)),
+            new Point((int)(15.5 * width), (int)(6 * width)),
+            new Point((int)(15.5 * width), (int)(7 * width)),
+            new Point((int)(15.5 * width), (int)(8 * width)),
+            new Point((int)(15.5 * width), (int)(9 * width)),
+            new Point((int)(15.5 * width), (int)(10 * width)),
+            new Point((int)(15 * width), (int)(11 * width)),
+            new Point((int)(14 * width), (int)(11.5 * width)),
+            new Point((int)(13 * width), (int)(11.5 * width)),
+            new Point((int)(12 * width), (int)(11 * width)),
+            new Point((int)(11 * width), (int)(12 * width)),
+            new Point((int)(11.5 * width), (int)(13 * width)),
+            new Point((int)(11.5 * width), (int)(14 * width)),
+            new Point((int)(11 * width), (int)(15 * width)),
+            new Point((int)(10 * width), (int)(15.5 * width)),
+            new Point((int)(9 * width), (int)(15.5 * width)),
+            new Point((int)(8 * width), (int)(15.5 * width)),
+            new Point((int)(7 * width), (int)(15.5 * width)),
+            new Point((int)(6 * width), (int)(15.5 * width)),
+            new Point((int)(5 * width), (int)(15 * width)),
+            new Point((int)(4.5 * width), (int)(14 * width)),
+            new Point((int)(4.5 * width), (int)(13 * width)),
+            new Point((int)(5 * width), (int)(12 * width)),
+            new Point((int)(4 * width), (int)(11 * width)),
+            new Point((int)(4 * width), (int)(11 * width)),
+            new Point((int)(3 * width), (int)(11.5 * width)),
+            new Point((int)(2 * width), (int)(11.5 * width)),
+            new Point((int)(1 * width), (int)(11 * width)),
+            new Point((int)(0.5 * width), (int)(10 * width)),
+            new Point((int)(0.5 * width), (int)(9 * width)),
+            new Point((int)(0.5 * width), (int)(8 * width)),
+            new Point((int)(0.5 * width), (int)(7 * width)),
+            new Point((int)(0.5 * width), (int)(6 * width)),
+            new Point((int)(1 * width), (int)(5 * width)),
+            new Point((int)(2 * width), (int)(4.5 * width)),
+            new Point((int)(3 * width), (int)(4.5 * width)),
+            new Point((int)(4 * width), (int)(5 * width)),
+            new Point((int)(5 * width), (int)(4 * width)),
+            new Point((int)(4.5 * width), (int)(3 * width)),
+            new Point((int)(4.5 * width), (int)(2 * width)),
+            new Point((int)(5 * width), (int)(1 * width))
+            };
+
         public Form_main()
         {
             InitializeComponent();
@@ -20,6 +77,21 @@ namespace final
 
         private void Form_main_Load(object sender, EventArgs e)
         {
+            CreateMap();
+            CreatePlane();
+        }
+        public void CreateCycle()
+        {
+
+        }
+        public void CreatePlane()
+        {
+
+        }
+        public void CreateMap()
+        {
+
+
             Bitmap bitmap = new Bitmap(17 * width, 17 * width);
             Graphics g = Graphics.FromImage(bitmap);
             Pen pen = new Pen(Color.Black, 2);
@@ -27,7 +99,7 @@ namespace final
             Brush brushBlue = new SolidBrush(Color.Blue);
             Brush brushOrange = new SolidBrush(Color.Orange);
             Brush brushGreen = new SolidBrush(Color.LightGreen);
-            Brush brushWhite = new SolidBrush(Color.White);
+            Brush brushGray = new SolidBrush(Color.FromArgb(235, 235, 235));
             g.FillRectangle(brushOrange, new Rectangle(6 * width, 0, width, 2 * width));
             g.FillRectangle(brushGreen, new Rectangle(7 * width, 0, width, 2 * width));
             g.FillRectangle(brushRed, new Rectangle(8 * width, 0, width, 2 * width));
@@ -47,19 +119,19 @@ namespace final
             g.FillRectangle(brushGreen, new Rectangle(4 * width, 3 * width, 2 * width, width));
             g.FillRectangle(brushRed, new Rectangle(11 * width, 2 * width, 2 * width, width));
             g.FillRectangle(brushBlue, new Rectangle(11 * width, 3 * width, 2 * width, width));
-            Point point7 = new Point(11 * width, 4*width);
+            Point point7 = new Point(11 * width, 4 * width);
             Point point8 = new Point(11 * width, 6 * width);
             Point point9 = new Point(13 * width, 4 * width);
             Point[] pntArr3 = { point7, point8, point9 };
             g.FillPolygon(brushOrange, pntArr3);
-            Point point10 = new Point(13 * width, 6*width);
-            Point point11= new Point(11 * width, 6 * width);
+            Point point10 = new Point(13 * width, 6 * width);
+            Point point11 = new Point(11 * width, 6 * width);
             Point point12 = new Point(13 * width, 4 * width);
             Point[] pntArr4 = { point10, point11, point12 };
             g.FillPolygon(brushGreen, pntArr4);
-            Point point13 = new Point(4 * width, 4*width);
-            Point point14= new Point(6* width, 6 * width);
-            Point point15= new Point(6 * width, 4 * width);
+            Point point13 = new Point(4 * width, 4 * width);
+            Point point14 = new Point(6 * width, 6 * width);
+            Point point15 = new Point(6 * width, 4 * width);
             Point[] pntArr5 = { point13, point14, point15 };
             g.FillPolygon(brushOrange, pntArr5);
             Point point16 = new Point(4 * width, 4 * width);
@@ -67,7 +139,7 @@ namespace final
             Point point18 = new Point(6 * width, 6 * width);
             Point[] pntArr6 = { point16, point17, point18 };
             g.FillPolygon(brushBlue, pntArr6);
-            g.FillRectangle(brushGreen, new Rectangle(2 * width, 4 * width,  width, 2 * width));
+            g.FillRectangle(brushGreen, new Rectangle(2 * width, 4 * width, width, 2 * width));
             g.FillRectangle(brushRed, new Rectangle(3 * width, 4 * width, width, 2 * width));
             g.FillRectangle(brushRed, new Rectangle(13 * width, 4 * width, width, 2 * width));
             g.FillRectangle(brushBlue, new Rectangle(14 * width, 4 * width, width, 2 * width));
@@ -85,16 +157,16 @@ namespace final
             g.FillRectangle(brushRed, new Rectangle(0 * width, 7 * width, 2 * width, width));
             g.FillRectangle(brushGreen, new Rectangle(15 * width, 6 * width, 2 * width, width));
             g.FillRectangle(brushRed, new Rectangle(15 * width, 7 * width, 2 * width, width));
-            g.FillRectangle(brushRed, new Rectangle(8 * width, 2 * width, 1 * width, 5*width));
+            g.FillRectangle(brushRed, new Rectangle(8 * width, 2 * width, 1 * width, 5 * width));
             Point point25 = new Point(7 * width, 7 * width);
             Point point26 = new Point(10 * width, 7 * width);
-            Point point27 = new Point(255, 255);
+            Point point27 = new Point(306, 306);
             Point[] pntArr9 = { point25, point26, point27 };
             g.FillPolygon(brushRed, pntArr9);
             g.FillRectangle(brushGreen, new Rectangle(0 * width, 8 * width, 7 * width, 1 * width));
             Point point28 = new Point(7 * width, 7 * width);
             Point point29 = new Point(7 * width, 10 * width);
-            Point point30 = new Point(255, 255);
+            Point point30 = new Point(306, 306);
             Point[] pntArr10 = { point28, point29, point30 };
             g.FillPolygon(brushGreen, pntArr10);
             g.FillRectangle(brushGreen, new Rectangle(0 * width, 0 * width, 4 * width, 4 * width));
@@ -104,36 +176,36 @@ namespace final
             g.FillRectangle(brushOrange, new Rectangle(8 * width, 10 * width, 1 * width, 7 * width));
             Point point31 = new Point(7 * width, 10 * width);
             Point point32 = new Point(10 * width, 10 * width);
-            Point point33 = new Point(255, 255);
+            Point point33 = new Point(306, 306);
             Point[] pntArr11 = { point31, point32, point33 };
             g.FillPolygon(brushOrange, pntArr11);
             g.FillRectangle(brushBlue, new Rectangle(10 * width, 8 * width, 7 * width, 1 * width));
             Point point34 = new Point(10 * width, 7 * width);
             Point point35 = new Point(10 * width, 10 * width);
-            Point point36 = new Point(255, 255);
+            Point point36 = new Point(306, 306);
             Point[] pntArr12 = { point34, point35, point36 };
             g.FillPolygon(brushBlue, pntArr12);
-            g.DrawLine(pen, 0,0, 0,120);
-            g.DrawLine(pen, 0, 0, 120, 0);
-            g.DrawLine(pen, 0, 120, 120, 120);
-            g.DrawLine(pen, 120, 0, 120, 120);
-            g.DrawLine(pen, 390, 0, 510, 0);
-            g.DrawLine(pen, 390, 120, 510, 120);
-            g.DrawLine(pen, 390, 120, 390, 0);
-            g.DrawLine(pen, 510, 0, 510, 120);
-            g.DrawLine(pen, 0, 390, 0, 510);
-            g.DrawLine(pen, 120, 390, 120, 510);
-            g.DrawLine(pen, 0, 390, 120, 390);
-            g.DrawLine(pen, 0, 510, 120, 510);
-            g.DrawLine(pen, 390, 390, 390, 510);
-            g.DrawLine(pen, 390, 510, 510, 510);
-            g.DrawLine(pen, 390, 390, 510, 390);
-            g.DrawLine(pen, 510, 390, 510, 510);
+            g.DrawLine(pen, 0, 0, 0, 4 * width);
+            g.DrawLine(pen, 0, 0, 4 * width, 0);
+            g.DrawLine(pen, 0, 4 * width, 4 * width, 4 * width);
+            g.DrawLine(pen, 4 * width, 0, 4 * width, 4 * width);
+            g.DrawLine(pen, 13 * width, 0, 17 * width, 0);
+            g.DrawLine(pen, 13 * width, 4 * width, 17 * width, 4 * width);
+            g.DrawLine(pen, 13 * width, 4 * width, 13 * width, 0);
+            g.DrawLine(pen, 17 * width, 0, 17 * width, 4 * width);
+            g.DrawLine(pen, 0, 13 * width, 0, 17 * width);
+            g.DrawLine(pen, 4 * width, 13 * width, 4 * width, 17 * width);
+            g.DrawLine(pen, 0, 13 * width, 4 * width, 13 * width);
+            g.DrawLine(pen, 0, 17 * width, 4 * width, 17 * width);
+            g.DrawLine(pen, 13 * width, 13 * width, 13 * width, 17 * width);
+            g.DrawLine(pen, 13 * width, 17 * width, 17 * width, 17 * width);
+            g.DrawLine(pen, 13 * width, 13 * width, 17 * width, 13 * width);
+            g.DrawLine(pen, 17 * width, 13 * width, 17 * width, 17 * width);
             g.FillRectangle(brushOrange, new Rectangle(0 * width, 9 * width, 2 * width, 1 * width));
             g.FillRectangle(brushBlue, new Rectangle(0 * width, 10 * width, 2 * width, 1 * width));
             g.FillRectangle(brushOrange, new Rectangle(15 * width, 9 * width, 2 * width, 1 * width));
             g.FillRectangle(brushGreen, new Rectangle(15 * width, 10 * width, 2 * width, 1 * width));
-            g.FillRectangle(brushGreen, new Rectangle(2* width, 11 * width, 1 * width, 2 * width));
+            g.FillRectangle(brushGreen, new Rectangle(2 * width, 11 * width, 1 * width, 2 * width));
             g.FillRectangle(brushBlue, new Rectangle(14 * width, 11 * width, 1 * width, 2 * width));
             g.FillRectangle(brushOrange, new Rectangle(13 * width, 11 * width, 1 * width, 2 * width));
             g.FillRectangle(brushOrange, new Rectangle(3 * width, 11 * width, 1 * width, 2 * width));
@@ -171,13 +243,13 @@ namespace final
             Point[] pntArr17 = { point49, point50, point51 };
             g.FillPolygon(brushBlue, pntArr17);
             Point point52 = new Point(4 * width, 15 * width);
-            Point point53 = new Point(6* width, 15 * width);
+            Point point53 = new Point(6 * width, 15 * width);
             Point point54 = new Point(6 * width, 17 * width);
-            Point[] pntArr18= { point52, point53, point54 };
+            Point[] pntArr18 = { point52, point53, point54 };
             g.FillPolygon(brushBlue, pntArr18);
-            Point point55= new Point(11 * width, 15 * width);
+            Point point55 = new Point(11 * width, 15 * width);
             Point point56 = new Point(13 * width, 15 * width);
-            Point point57 = new Point(11* width, 17 * width);
+            Point point57 = new Point(11 * width, 17 * width);
             Point[] pntArr19 = { point55, point56, point57 };
             g.FillPolygon(brushGreen, pntArr19);
             Point point58 = new Point(11 * width, 11 * width);
@@ -185,7 +257,16 @@ namespace final
             Point point60 = new Point(13 * width, 13 * width);
             Point[] pntArr20 = { point58, point59, point60 };
             g.FillPolygon(brushGreen, pntArr20);
+            for(int i = 0;i < points.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(points[i].X, points[i].Y, width, width));
+            }
             pictureBox1.Image = bitmap;
+            pictureBox2.Image = Image.FromFile("red.png");
+            pictureBox2.Size = new Size(24, 24);
+            pictureBox2.Location = new Point((int)(2.5 * width - 12), (int)(5.0 * width - 12));
+
+
         }
     }
 }
