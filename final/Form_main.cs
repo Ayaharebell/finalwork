@@ -24,51 +24,112 @@ namespace final
             new Point((int)(11.5 * width), (int)(2 * width)),
             new Point((int)(11.5 * width), (int)(3 * width)),
             new Point((int)(11 * width), (int)(4 * width)),
-            new Point((int)(12 * width), (int)(5 * width)),
+            new Point((int)(12 * width), (int)(5 * width)),//绿起飞
             new Point((int)(13 * width), (int)(4.5 * width)),
             new Point((int)(14 * width), (int)(4.5 * width)),
             new Point((int)(15 * width), (int)(5 * width)),
             new Point((int)(15.5 * width), (int)(6 * width)),
             new Point((int)(15.5 * width), (int)(7 * width)),
-            new Point((int)(15.5 * width), (int)(8 * width)),
+            new Point((int)(15.5 * width), (int)(8 * width)),//蓝家门口
             new Point((int)(15.5 * width), (int)(9 * width)),
             new Point((int)(15.5 * width), (int)(10 * width)),
             new Point((int)(15 * width), (int)(11 * width)),
             new Point((int)(14 * width), (int)(11.5 * width)),
             new Point((int)(13 * width), (int)(11.5 * width)),
             new Point((int)(12 * width), (int)(11 * width)),
-            new Point((int)(11 * width), (int)(12 * width)),
+            new Point((int)(11 * width), (int)(12 * width)),//红起飞
             new Point((int)(11.5 * width), (int)(13 * width)),
             new Point((int)(11.5 * width), (int)(14 * width)),
             new Point((int)(11 * width), (int)(15 * width)),
             new Point((int)(10 * width), (int)(15.5 * width)),
             new Point((int)(9 * width), (int)(15.5 * width)),
-            new Point((int)(8 * width), (int)(15.5 * width)),
+            new Point((int)(8 * width), (int)(15.5 * width)),//黄家门口
             new Point((int)(7 * width), (int)(15.5 * width)),
             new Point((int)(6 * width), (int)(15.5 * width)),
             new Point((int)(5 * width), (int)(15 * width)),
             new Point((int)(4.5 * width), (int)(14 * width)),
             new Point((int)(4.5 * width), (int)(13 * width)),
             new Point((int)(5 * width), (int)(12 * width)),
-            new Point((int)(4 * width), (int)(11 * width)),
-            new Point((int)(4 * width), (int)(11 * width)),
+            new Point((int)(4 * width), (int)(11 * width)),//蓝起飞
             new Point((int)(3 * width), (int)(11.5 * width)),
             new Point((int)(2 * width), (int)(11.5 * width)),
             new Point((int)(1 * width), (int)(11 * width)),
             new Point((int)(0.5 * width), (int)(10 * width)),
             new Point((int)(0.5 * width), (int)(9 * width)),
-            new Point((int)(0.5 * width), (int)(8 * width)),
+            new Point((int)(0.5 * width), (int)(8 * width)),//绿家门口
             new Point((int)(0.5 * width), (int)(7 * width)),
             new Point((int)(0.5 * width), (int)(6 * width)),
             new Point((int)(1 * width), (int)(5 * width)),
             new Point((int)(2 * width), (int)(4.5 * width)),
             new Point((int)(3 * width), (int)(4.5 * width)),
             new Point((int)(4 * width), (int)(5 * width)),
-            new Point((int)(5 * width), (int)(4 * width)),
+            new Point((int)(5 * width), (int)(4 * width)),//黄起飞
             new Point((int)(4.5 * width), (int)(3 * width)),
             new Point((int)(4.5 * width), (int)(2 * width)),
             new Point((int)(5 * width), (int)(1 * width))
-            };
+        };
+        Point[] pointsRedHome = {
+            new Point((int)(13.5*width),(int)(0.5*width)),
+            new Point((int)(13.5*width),(int)(2.5*width)),
+            new Point((int)(15.5*width),(int)(0.5*width)),
+            new Point((int)(15.5*width),(int)(2.5*width))
+        };
+        Point[] pointsBlueHome = {
+            new Point((int)(13.5*width),(int)(13.5*width)),
+            new Point((int)(13.5*width),(int)(15.5*width)),
+            new Point((int)(15.5*width),(int)(13.5*width)),
+            new Point((int)(15.5*width),(int)(15.5*width))
+        };
+        Point[] pointsYellowHome = {
+            new Point((int)(0.5*width),(int)(13.5*width)),
+            new Point((int)(2.5*width),(int)(13.5*width)),
+            new Point((int)(0.5*width),(int)(15.5*width)),
+            new Point((int)(2.5*width),(int)(15.5*width))
+        };
+        Point[] pointsGreenHome = {
+            new Point((int)(0.5*width),(int)(0.5*width)),
+            new Point((int)(2.5*width),(int)(0.5*width)),
+            new Point((int)(0.5*width),(int)(2.5*width)),
+            new Point((int)(2.5*width),(int)(2.5*width))
+        };
+        Point[] pointsRedFinish = {
+            new Point((int)(8 * width), (int)(0.5 * width)),
+            new Point(8*width,2*width),
+            new Point(8*width,3*width),
+            new Point(8*width,4*width),
+            new Point(8*width,5*width),
+            new Point(8*width,6*width),
+            new Point(8*width,7*width)
+        };
+        Point[] pointsBlueFinish =
+        {
+            new Point((int)(15.5 * width), (int)(8 * width)),
+            new Point((int)(14 * width), (int)(8 * width)),
+            new Point((int)(13 * width), (int)(8 * width)),
+            new Point((int)(12 * width), (int)(8 * width)),
+            new Point((int)(11 * width), (int)(8 * width)),
+            new Point((int)(10 * width), (int)(8 * width)),
+            new Point((int)(9 * width), (int)(8 * width))
+        };
+        Point[] pointsYellowFinish = {
+            new Point((int)(8 * width), (int)(15.5 * width)),
+            new Point(8*width,14*width),
+            new Point(8*width,13*width),
+            new Point(8*width,12*width),
+            new Point(8*width,11*width),
+            new Point(8*width,10*width),
+            new Point(8*width,9*width)
+        };
+        Point[] pointsGreenFinish =
+        {
+            new Point((int)(0.5 * width), (int)(8 * width)),
+            new Point((int)(2 * width), (int)(8 * width)),
+            new Point((int)(3 * width), (int)(8 * width)),
+            new Point((int)(4 * width), (int)(8 * width)),
+            new Point((int)(5 * width), (int)(8 * width)),
+            new Point((int)(6 * width), (int)(8 * width)),
+            new Point((int)(7 * width), (int)(8 * width))
+        };
 
         public Form_main()
         {
@@ -212,7 +273,7 @@ namespace final
             g.FillRectangle(brushGreen, new Rectangle(4 * width, 13 * width, 2 * width, 1 * width));
             g.FillRectangle(brushOrange, new Rectangle(4 * width, 14 * width, 2 * width, 1 * width));
             g.FillRectangle(brushBlue, new Rectangle(11 * width, 13 * width, 2 * width, 1 * width));
-            g.FillRectangle(brushRed, new Rectangle(11 * width, 14 * width, 2 * width, 1 * width));
+            g.FillRectangle(brushOrange, new Rectangle(11 * width, 14 * width, 2 * width, 1 * width));
             g.FillRectangle(brushRed, new Rectangle(6 * width, 15 * width, 1 * width, 2 * width));
             g.FillRectangle(brushGreen, new Rectangle(7 * width, 15 * width, 1 * width, 2 * width));
             g.FillRectangle(brushBlue, new Rectangle(9 * width, 15 * width, 1 * width, 2 * width));
@@ -261,6 +322,39 @@ namespace final
             {
                 g.FillEllipse(brushGray, new Rectangle(points[i].X, points[i].Y, width, width));
             }
+            for(int i = 0; i < pointsRedHome.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsRedHome[i].X, pointsRedHome[i].Y, width, width));
+            }
+            for (int i = 0; i < pointsBlueHome.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsBlueHome[i].X, pointsBlueHome[i].Y, width, width));
+            }
+            for (int i = 0; i < pointsYellowHome.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsYellowHome[i].X, pointsYellowHome[i].Y, width, width));
+            }
+            for (int i = 0; i < pointsGreenHome.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsGreenHome[i].X, pointsGreenHome[i].Y, width, width));
+            }
+            for (int i = 1; i < pointsRedFinish.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsRedFinish[i].X, pointsRedFinish[i].Y, width, width));
+            }
+            for (int i = 1; i < pointsBlueFinish.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsBlueFinish[i].X, pointsBlueFinish[i].Y, width, width));
+            }
+            for (int i = 1; i < pointsYellowFinish.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsYellowFinish[i].X, pointsYellowFinish[i].Y, width, width));
+            }
+            for (int i = 1; i < pointsGreenFinish.Length; i++)
+            {
+                g.FillEllipse(brushGray, new Rectangle(pointsGreenFinish[i].X, pointsGreenFinish[i].Y, width, width));
+            }
+
             pictureBox1.Image = bitmap;
             pictureBox2.Image = Image.FromFile("red.png");
             pictureBox2.Size = new Size(24, 24);

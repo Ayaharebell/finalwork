@@ -74,6 +74,7 @@
     <Compile Include="Form_solve.Designer.cs">
       <DependentUpon>Form_solve.cs</DependentUpon>
     </Compile>
+    <Compile Include="Plane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
