@@ -14,6 +14,14 @@ namespace final
     {
 
         const int width = 36;
+        int player = 0;
+        /*表示玩家
+         * 0 none
+         * 1 red
+         * 2 blue
+         * 3 yellow
+         * 4 green
+         */
         Point[] points = {
             new Point((int)(6 * width), (int)(0.5 * width)),
             new Point((int)(7 * width), (int)(0.5 * width)),
@@ -140,19 +148,63 @@ namespace final
         {
             CreateMap();
             CreatePlane();
-        }
-        public void CreateCycle()
-        {
-
+            dice.Location = new Point(18 * width, 16 * width);
+            dice.Height = width;
+            dice.Width = 2 * width;
         }
         public void CreatePlane()
         {
-
+            red0.Image = Image.FromFile("red.png");
+            red0.Size = new Size(24, 24);
+            red0.Location = new Point((int)(pointsRedHome[0].X + width / 2 - 12), (int)(pointsRedHome[0].Y + width / 2) - 12);
+            red1.Image = Image.FromFile("red.png");
+            red1.Size = new Size(24, 24);
+            red1.Location = new Point((int)(pointsRedHome[1].X + width / 2 - 12), (int)(pointsRedHome[1].Y + width / 2) - 12);
+            red2.Image = Image.FromFile("red.png");
+            red2.Size = new Size(24, 24);
+            red2.Location = new Point((int)(pointsRedHome[2].X + width / 2 - 12), (int)(pointsRedHome[2].Y + width / 2) - 12);
+            red3.Image = Image.FromFile("red.png");
+            red3.Size = new Size(24, 24);
+            red3.Location = new Point((int)(pointsRedHome[3].X + width / 2 - 12), (int)(pointsRedHome[3].Y + width / 2) - 12);
+            blue0.Image = Image.FromFile("blue.png");
+            blue0.Size = new Size(24, 24);
+            blue0.Location = new Point((int)(pointsBlueHome[0].X + width / 2 - 12), (int)(pointsBlueHome[0].Y + width / 2) - 12);
+            blue1.Image = Image.FromFile("blue.png");
+            blue1.Size = new Size(24, 24);
+            blue1.Location = new Point((int)(pointsBlueHome[1].X + width / 2 - 12), (int)(pointsBlueHome[1].Y + width / 2) - 12);
+            blue2.Image = Image.FromFile("blue.png");
+            blue2.Size = new Size(24, 24);
+            blue2.Location = new Point((int)(pointsBlueHome[2].X + width / 2 - 12), (int)(pointsBlueHome[2].Y + width / 2) - 12);
+            blue3.Image = Image.FromFile("blue.png");
+            blue3.Size = new Size(24, 24);
+            blue3.Location = new Point((int)(pointsBlueHome[3].X + width / 2 - 12), (int)(pointsBlueHome[3].Y + width / 2) - 12);
+            yellow0.Image = Image.FromFile("orange.png");
+            yellow0.Size = new Size(24, 24);
+            yellow0.Location = new Point((int)(pointsYellowHome[0].X + width / 2 - 12), (int)(pointsYellowHome[0].Y + width / 2) - 12);
+            yellow1.Image = Image.FromFile("orange.png");
+            yellow1.Size = new Size(24, 24);
+            yellow1.Location = new Point((int)(pointsYellowHome[1].X + width / 2 - 12), (int)(pointsYellowHome[1].Y + width / 2) - 12);
+            yellow2.Image = Image.FromFile("orange.png");
+            yellow2.Size = new Size(24, 24);
+            yellow2.Location = new Point((int)(pointsYellowHome[2].X + width / 2 - 12), (int)(pointsYellowHome[2].Y + width / 2) - 12);
+            yellow3.Image = Image.FromFile("orange.png");
+            yellow3.Size = new Size(24, 24);
+            yellow3.Location = new Point((int)(pointsYellowHome[3].X + width / 2 - 12), (int)(pointsYellowHome[3].Y + width / 2) - 12);
+            green0.Image = Image.FromFile("green.png");
+            green0.Size = new Size(24, 24);
+            green0.Location = new Point((int)(pointsGreenHome[0].X + width / 2 - 12), (int)(pointsGreenHome[0].Y + width / 2) - 12);
+            green1.Image = Image.FromFile("green.png");
+            green1.Size = new Size(24, 24);
+            green1.Location = new Point((int)(pointsGreenHome[1].X + width / 2 - 12), (int)(pointsGreenHome[1].Y + width / 2) - 12);
+            green2.Image = Image.FromFile("green.png");
+            green2.Size = new Size(24, 24);
+            green2.Location = new Point((int)(pointsGreenHome[2].X + width / 2 - 12), (int)(pointsGreenHome[2].Y + width / 2) - 12);
+            green3.Image = Image.FromFile("green.png");
+            green3.Size = new Size(24, 24);
+            green3.Location = new Point((int)(pointsGreenHome[3].X + width / 2 - 12), (int)(pointsGreenHome[3].Y + width / 2) - 12);
         }
         public void CreateMap()
         {
-
-
             Bitmap bitmap = new Bitmap(17 * width, 17 * width);
             Graphics g = Graphics.FromImage(bitmap);
             Pen pen = new Pen(Color.Black, 2);
@@ -354,13 +406,8 @@ namespace final
             {
                 g.FillEllipse(brushGray, new Rectangle(pointsGreenFinish[i].X, pointsGreenFinish[i].Y, width, width));
             }
-
             pictureBox1.Image = bitmap;
-            pictureBox2.Image = Image.FromFile("red.png");
-            pictureBox2.Size = new Size(24, 24);
-            pictureBox2.Location = new Point((int)(2.5 * width - 12), (int)(5.0 * width - 12));
-
-
         }
+
     }
 }
