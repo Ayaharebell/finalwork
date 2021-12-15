@@ -9,19 +9,22 @@ namespace final
 {
     class Plane
     {
-        Point point;
-        String path;
+        Boolean isHome;
+        Boolean isPlaying;
         Boolean isFinish;
+        int location;//数组下标
 
-        public Plane(Point point, string path, bool isFinish)
+        public Plane(bool isHome, bool isPlaying, bool isFinish, int location)
         {
-            this.point = point;
-            this.path = path;
+            this.isHome = isHome;
+            this.isPlaying = isPlaying;
             this.isFinish = isFinish;
+            this.location = location;
         }
 
-        public Point Point { get => point; set => point = value; }
-        public string Path { get => path; set => path = value; }
+        public bool IsHome { get => isHome; set => isHome = value; }
+        public bool IsPlaying { get => isPlaying; set => isPlaying = value; }
         public bool IsFinish { get => isFinish; set => isFinish = value; }
+        public int Location { get => location; set => location = value; }
     }
 }
