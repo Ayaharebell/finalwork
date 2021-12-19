@@ -50,6 +50,7 @@
             this.diceShow = new System.Windows.Forms.PictureBox();
             this.startButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.openAndSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.board)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.red0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.red1)).BeginInit();
@@ -227,9 +228,9 @@
             // throwDice
             // 
             this.throwDice.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.throwDice.Location = new System.Drawing.Point(482, 504);
+            this.throwDice.Location = new System.Drawing.Point(506, 455);
             this.throwDice.Name = "throwDice";
-            this.throwDice.Size = new System.Drawing.Size(90, 45);
+            this.throwDice.Size = new System.Drawing.Size(18, 45);
             this.throwDice.TabIndex = 17;
             this.throwDice.Text = "投骰子";
             this.throwDice.UseVisualStyleBackColor = true;
@@ -257,7 +258,7 @@
             this.startButton.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.startButton.Location = new System.Drawing.Point(482, 455);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(90, 45);
+            this.startButton.Size = new System.Drawing.Size(18, 45);
             this.startButton.TabIndex = 20;
             this.startButton.Text = "开始游戏";
             this.startButton.UseVisualStyleBackColor = true;
@@ -272,11 +273,23 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "label1";
             // 
+            // openAndSave
+            // 
+            this.openAndSave.Font = new System.Drawing.Font("华文中宋", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.openAndSave.Location = new System.Drawing.Point(530, 455);
+            this.openAndSave.Name = "openAndSave";
+            this.openAndSave.Size = new System.Drawing.Size(18, 45);
+            this.openAndSave.TabIndex = 22;
+            this.openAndSave.Text = "导入";
+            this.openAndSave.UseVisualStyleBackColor = true;
+            this.openAndSave.Click += new System.EventHandler(this.openAndSave_Click);
+            // 
             // Form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.openAndSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.diceShow);
@@ -350,5 +363,6 @@
         private System.Windows.Forms.PictureBox diceShow;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button openAndSave;
     }
 }
